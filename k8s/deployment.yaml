@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: docker.io/dishalalwani/reimbursement-frontend:3a2055c
+          image: docker.io/dishalalwani/reimbursement-frontend:1f44d20
           ports:
             - containerPort: 3000
           readinessProbe:
