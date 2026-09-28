@@ -38,6 +38,8 @@ jobs:
           context: .
           file: ./Dockerfile
           platforms: linux/amd64
+          build-args: |
+            NEXT_PUBLIC_API_URL=${{ vars.API_URL }}
           push: ${{ github.event_name == 'push' }}
           tags: |
             docker.io/${{ secrets.DOCKERHUB_USERNAME }}/reimbursement-frontend:${{ steps.vars.outputs.tag }}
